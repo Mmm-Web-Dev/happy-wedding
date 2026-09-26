@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan Rizky & Nabila</title>
+  <meta name="description"
+    content="Kami mengundang Anda untuk hadir dan berbagi kebahagiaan dalam momen suci pernikahan kami. Rizky Pratama & Nabila Aulia — 15 Februari 2027." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&display=swap"
+    rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- COVER PAGE -->
+  <div id="cover-page" class="cover-page">
+    <canvas id="particles-canvas"></canvas>
+    <div class="cover-floral-top"></div>
+    <div class="cover-floral-bottom"></div>
+    <div class="cover-content">
+      <p class="cover-label">Undangan Pernikahan</p>
+      <div class="cover-divider">
+        <span class="divider-line"></span>
+        <span class="divider-icon">♥</span>
+        <span class="divider-line"></span>
+      </div>
+      <h1 class="cover-names">
+        <span class="name-groom">Rizky</span>
+        <span class="name-ampersand">&amp;</span>
+        <span class="name-bride">Nabila</span>
+      </h1>
+      <p class="cover-date">15 · 02 · 2027</p>
+      <p class="cover-guest-label">Kepada Yth.</p>
+      <p class="cover-guest-name" id="guest-name-display">Bapak/Ibu/Saudara/i Tamu Undangan</p>
+      <button class="btn-open-invitation" id="btn-open" onclick="openInvitation()">
+        <span class="btn-icon">✉</span>
+        Buka Undangan
+      </button>
+    </div>
+    <div class="petals-container" id="petals-container"></div>
+  </div>
+
+  <!-- MAIN INVITATION -->
+  <div id="main-content" class="main-content hidden">
+
+    <!-- STICKY NAV -->
+    <nav class="sticky-nav" id="sticky-nav">
+      <div class="nav-inner">
+        <a href="#hero-section" class="nav-link active" data-section="hero-section" title="Home">🏠</a>
+        <a href="#couple-section" class="nav-link" data-section="couple-section" title="Mempelai">💑</a>
+        <a href="#event-section" class="nav-link" data-section="event-section" title="Acara">📅</a>
+        <a href="#story-section" class="nav-link" data-section="story-section" title="Love Story">📖</a>
+        <a href="#gallery-section" class="nav-link" data-section="gallery-section" title="Galeri">📷</a>
+        <a href="#rsvp-section" class="nav-link" data-section="rsvp-section" title="RSVP">✅</a>
+        <a href="#wishes-section" class="nav-link" data-section="wishes-section" title="Ucapan">💬</a>
+        <a href="#gift-section" class="nav-link" data-section="gift-section" title="Amplop">🎁</a>
+      </div>
+    </nav>
+
+    <!-- MUSIC PLAYER -->
+    <div class="music-player" id="music-player">
+      <div class="music-vinyl" id="music-vinyl">🎵</div>
+      <div class="music-info">
+        <span class="music-title">Romantic</span>
+        <span class="music-artist">Bensound</span>
+      </div>
+      <button class="music-toggle" id="music-toggle" onclick="toggleMusic()">▶</button>
+      <audio id="bg-music" autoplay loop preload="auto">
+        <source src="song/Jaz - Bersamamu (Official Lyric Video).mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero-section" id="hero-section">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+        <p class="hero-arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
+        <p class="hero-quran-intro">Dengan memohon rahmat dan ridho Allah SWT</p>
+        <div class="hero-divider"><span></span><span class="heart-icon">♥</span><span></span></div>
+        <h2 class="hero-groom-name">Rizky Pratama</h2>
+        <p class="hero-and">&amp;</p>
+        <h2 class="hero-bride-name">Nabila Aulia</h2>
+        <p class="hero-date-text">Minggu, 15 Februari 2027</p>
+        <p class="hero-location-text">Grand Ballroom The Ritz — Jakarta</p>
+      </div>
+      <div class="hero-scroll-hint">
+        <span class="scroll-arrow">↓</span>
+      </div>
+    </section>
+
+    <!-- COUPLE -->
+    <section class="couple-section" id="couple-section">
+      <div class="section-bg-floral couple-floral"></div>
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Mempelai</span>
+          <h2 class="section-title">Kami Yang Berbahagia</h2>
+          <div class="title-ornament">✦ ✦ ✦</div>
+        </div>
+        <div class="couple-cards">
+          <div class="couple-card" data-aos="fade-right" data-aos-delay="100">
+            <div class="couple-photo-wrap">
+              <img src="couple1.jpg" alt="Rizky Pratama" class="couple-photo" />
+              <div class="photo-ring"></div>
+            </div>
+            <div class="couple-info">
+              <div class="couple-role">Mempelai Pria</div>
+              <h3 class="couple-name">Rizky Pratama, S.T.</h3>
+              <p class="couple-parents">Putra pertama dari<br /><strong>Bapak H. Ahmad Fauzi</strong><br />&amp;
+                <strong>Ibu Hj. Sri Wahyuni</strong>
+              </p>
+              <a href="https://wa.me/6281234567890" class="btn-wa-couple" id="wa-groom" target="_blank">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Chat WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="couple-divider" data-aos="zoom-in" data-aos-delay="200">
+            <div class="divider-heart-large">♥</div>
+            <p class="couple-verse">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan
+              hidup dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya."</p>
+            <p class="couple-verse-ref">— QS. Ar-Rum: 21</p>
+          </div>
+
+          <div class="couple-card" data-aos="fade-left" data-aos-delay="100">
+            <div class="couple-photo-wrap">
+              <img src="couple2.jpg" alt="Nabila Aulia" class="couple-photo" />
+              <div class="photo-ring"></div>
+            </div>
+            <div class="couple-info">
+              <div class="couple-role">Mempelai Wanita</div>
+              <h3 class="couple-name">Nabila Aulia, S.Pd.</h3>
+              <p class="couple-parents">Putri pertama dari<br /><strong>Bapak H. Darmawan</strong><br />&amp;
+                <strong>Ibu Hj. Fatimah</strong>
+              </p>
+              <a href="https://wa.me/6289876543210" class="btn-wa-couple" id="wa-bride" target="_blank">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Chat WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown-section" id="countdown-section">
+      <div class="countdown-bg"></div>
+      <div class="container" data-aos="fade-up">
+        <div class="section-header light">
+          <span class="section-tag light-tag">Menuju Hari Bahagia</span>
+          <h2 class="section-title light-title">Hitung Mundur</h2>
+          <div class="title-ornament light-ornament">✦ ✦ ✦</div>
+        </div>
+        <div class="countdown-grid">
+          <div class="countdown-box" data-aos="zoom-in" data-aos-delay="100">
+            <span class="countdown-num" id="cd-days">00</span>
+            <span class="countdown-label">Hari</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-box" data-aos="zoom-in" data-aos-delay="200">
+            <span class="countdown-num" id="cd-hours">00</span>
+            <span class="countdown-label">Jam</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-box" data-aos="zoom-in" data-aos-delay="300">
+            <span class="countdown-num" id="cd-minutes">00</span>
+            <span class="countdown-label">Menit</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-box" data-aos="zoom-in" data-aos-delay="400">
+            <span class="countdown-num" id="cd-seconds">00</span>
+            <span class="countdown-label">Detik</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENT -->
+    <section class="event-section" id="event-section">
+      <div class="section-bg-floral event-floral"></div>
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Rangkaian Acara</span>
+          <h2 class="section-title">Detail Acara</h2>
+          <div class="title-ornament">✦ ✦ ✦</div>
+        </div>
+        <div class="event-cards">
+          <div class="event-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="event-icon-wrap"><span class="event-icon">🕌</span></div>
+            <div class="event-badge">Akad Nikah</div>
+            <h3 class="event-name">Akad Nikah</h3>
+            <div class="event-detail-row">
+              <span class="event-detail-icon">📅</span>
+              <div><strong>Minggu, 15 Februari 2027</strong>
+                <p>08.00 WIB — Selesai</p>
+              </div>
+            </div>
+            <div class="event-detail-row">
+              <span class="event-detail-icon">📍</span>
+              <div><strong>Masjid Al-Falah</strong>
+                <p>Jl. Sudirman No. 12, Jakarta Pusat</p>
+              </div>
+            </div>
+            <a href="https://maps.google.com/?q=Masjid+Al+Falah+Jakarta" target="_blank" class="btn-maps"
+              id="maps-akad">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Lihat di Google Maps
+            </a>
+            <div class="map-embed-wrap">
+              <iframe class="map-embed" src="https://maps.google.com/maps?q=Masjid+Al+Falah+Jakarta&output=embed"
+                allowfullscreen loading="lazy" title="Peta Akad Nikah"></iframe>
+            </div>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Akad+Nikah+Rizky+%26+Nabila&dates=20270215T010000Z/20270215T030000Z&location=Masjid+Al-Falah+Jakarta"
+              target="_blank" class="btn-calendar" id="cal-akad">📅 Simpan ke Kalender</a>
+          </div>
+
+          <div class="event-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="event-icon-wrap"><span class="event-icon">💍</span></div>
+            <div class="event-badge">Resepsi</div>
+            <h3 class="event-name">Resepsi Pernikahan</h3>
+            <div class="event-detail-row">
+              <span class="event-detail-icon">📅</span>
+              <div><strong>Minggu, 15 Februari 2027</strong>
+                <p>11.00 WIB — 17.00 WIB</p>
+              </div>
+            </div>
+            <div class="event-detail-row">
+              <span class="event-detail-icon">📍</span>
+              <div><strong>Grand Ballroom The Ritz</strong>
+                <p>Jl. M.H. Thamrin No. 1, Jakarta Pusat</p>
+              </div>
+            </div>
+            <a href="https://maps.google.com/?q=The+Ritz+Carlton+Jakarta" target="_blank" class="btn-maps"
+              id="maps-resepsi">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Lihat di Google Maps
+            </a>
+            <div class="map-embed-wrap">
+              <iframe class="map-embed" src="https://maps.google.com/maps?q=Ritz+Carlton+Jakarta&output=embed"
+                allowfullscreen loading="lazy" title="Peta Resepsi"></iframe>
+            </div>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Resepsi+Rizky+%26+Nabila&dates=20270215T040000Z/20270215T100000Z&location=The+Ritz+Carlton+Jakarta"
+              target="_blank" class="btn-calendar" id="cal-resepsi">📅 Simpan ke Kalender</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOVE STORY -->
+    <section class="story-section" id="story-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Perjalanan Cinta</span>
+          <h2 class="section-title">Love Story</h2>
+          <div class="title-ornament">✦ ✦ ✦</div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item left" data-aos="fade-right" data-aos-delay="100">
+            <div class="timeline-content">
+              <div class="timeline-icon">☕</div>
+              <div class="timeline-date">Maret 2020</div>
+              <h4 class="timeline-title">Pertemuan Pertama</h4>
+              <p class="timeline-desc">Kami bertemu untuk pertama kalinya di sebuah kafe kecil di Bandung. Sebuah
+                senyuman sederhana yang mengubah segalanya.</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="200">
+            <div class="timeline-content">
+              <div class="timeline-icon">🌸</div>
+              <div class="timeline-date">Juni 2020</div>
+              <h4 class="timeline-title">Mulai Dekat</h4>
+              <p class="timeline-desc">Percakapan panjang hingga dini hari, berbagi mimpi dan cerita. Kami mulai
+                menyadari betapa istimewanya satu sama lain.</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-item left" data-aos="fade-right" data-aos-delay="300">
+            <div class="timeline-content">
+              <div class="timeline-icon">💝</div>
+              <div class="timeline-date">14 Februari 2021</div>
+              <h4 class="timeline-title">Menjalin Hubungan</h4>
+              <p class="timeline-desc">Di bawah langit berbintang, Rizky mengungkapkan perasaannya. Nabila menjawab
+                dengan senyum yang takkan terlupakan.</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-item right" data-aos="fade-left" data-aos-delay="400">
+            <div class="timeline-content">
+              <div class="timeline-icon">💍</div>
+              <div class="timeline-date">14 Februari 2026</div>
+              <h4 class="timeline-title">Lamaran</h4>
+              <p class="timeline-desc">Dengan cincin terbaik dan segenap cinta, Rizky bertanya "Maukah kamu menjadi
+                istriku?" — Jawaban Nabila: "Iya, selamanya."</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-item left" data-aos="fade-right" data-aos-delay="500">
+            <div class="timeline-content">
+              <div class="timeline-icon">🌙</div>
+              <div class="timeline-date">15 Februari 2027</div>
+              <h4 class="timeline-title">Hari Pernikahan</h4>
+              <p class="timeline-desc">Hari yang paling dinantikan. Menyatukan dua jiwa dalam satu ikatan suci yang
+                diberkati Allah SWT.</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section" id="gallery-section">
+      <div class="section-bg-floral gallery-floral"></div>
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Galeri Foto</span>
+          <h2 class="section-title">Momen Kami</h2>
+          <div class="title-ornament">✦ ✦ ✦</div>
+        </div>
+        <div class="gallery-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="gallery-item gal-tall"
+            onclick="openLightbox('couple1.jpg','Rizky &amp; Nabila — Garden Session')">
+            <img src="couple1.jpg" alt="Pre-Wedding Garden" loading="lazy" />
+            <div class="gallery-overlay"><span>👁</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox('couple2.jpg','Rizky &amp; Nabila — Golden Hour')">
+            <img src="couple2.jpg" alt="Pre-Wedding Golden Hour" loading="lazy" />
+            <div class="gallery-overlay"><span>👁</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox('couple3.jpg','Rizky &amp; Nabila — Sunset Field')">
+            <img src="couple3.jpg" alt="Pre-Wedding Sunset" loading="lazy" />
+            <div class="gallery-overlay"><span>👁</span></div>
+          </div>
+          <div class="gallery-item gal-wide" onclick="openLightbox('hero-bg.jpg','Bunga Cinta Kami')">
+            <img src="hero-bg.jpg" alt="Floral Decoration" loading="lazy" />
+            <div class="gallery-overlay"><span>👁</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <img src="" alt="" id="lightbox-img" />
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+
+    <!-- VIDEO -->
+    <section class="video-section" id="video-section">
+      <div class="container">
+        <div class="section-header light" data-aos="fade-up">
+          <span class="section-tag light-tag">Video</span>
+          <h2 class="section-title light-title">Momen Spesial</h2>
+          <div class="title-ornament light-ornament">✦ ✦ ✦</div>
+        </div>
+        <div class="video-wrap" data-aos="zoom-in" data-aos-delay="100">
+          <iframe class="video-frame" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"
+            title="Video Pre-Wedding Rizky &amp; Nabila" allowfullscreen loading="lazy"></iframe>
+          <div class="video-label">✨ Video Pre-Wedding Rizky &amp; Nabila ✨</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp-section" id="rsvp-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Konfirmasi Kehadiran</span>
+          <h2 class="section-title">RSVP</h2>
+          <div class="title-ornament">✦ ✦ ✦</div>
+          <p class="section-desc">Mohon konfirmasi kehadiran Anda sebelum <strong>1 Februari 2027</strong></p>
+        </div>
+        <form class="rsvp-form" id="rsvp-form" data-aos="fade-up" data-aos-delay="100" onsubmit="submitRSVP(event)">
+          <div class="form-group">
+            <label class="form-label" for="rsvp-name">Nama Lengkap *</label>
+            <input type="text" id="rsvp-name" class="form-input" placeholder="Masukkan nama Anda" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="rsvp-phone">Nomor WhatsApp</label>
+            <input type="tel" id="rsvp-phone" class="form-input" placeholder="08xxxxxxxxxx" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Kehadiran *</label>
+            <div class="radio-group">
+              <label class="radio-option" for="hadir">
+                <input type="radio" id="hadir" name="kehadiran" value="hadir" required />
+                <span class="radio-custom"></span>
+                <span>✅ Hadir</span>
+              </label>
+              <label class="radio-option" for="tidak-hadir">
+                <input type="radio" id="tidak-hadir" name="kehadiran" value="tidak-hadir" />
+                <span class="radio-custom"></span>
+                <span>❌ Tidak Hadir</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="rsvp-guests">Jumlah Tamu</label>
+            <select id="rsvp-guests" class="form-input form-select">
+              <option value="1">1 orang</option>
+              <option value="2">2 orang</option>
+              <option value="3">3 orang</option>
+              <option value="4+">4+ orang</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit" id="rsvp-submit">
+            <span>Kirim Konfirmasi</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </form>
+        <div class="rsvp-success hidden" id="rsvp-success">
+          <div class="success-icon">🎉</div>
+          <h3>Terima Kasih!</h3>
+          <p>Konfirmasi Anda telah kami terima. Kami sangat menantikan kehadiran Anda!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WISHES -->
+    <section class="wishes-section" id="wishes-section">
+      <div class="section-bg-floral wishes-floral"></div>
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Ucapan &amp; Doa</span>
+          <h2 class="section-title">Sampaikan Doamu</h2>
+          <div class="title-ornament">✦ ✦ ✦</div>
+        </div>
+        <form class="wish-form" id="wish-form" data-aos="fade-up" data-aos-delay="100" onsubmit="submitWish(event)">
+          <div class="form-group">
+            <label class="form-label" for="wish-name">Nama</label>
+            <input type="text" id="wish-name" class="form-input" placeholder="Nama Anda" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="wish-text">Ucapan &amp; Doa</label>
+            <textarea id="wish-text" class="form-input form-textarea"
+              placeholder="Tuliskan ucapan dan doa terbaik Anda..." rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="wish-submit">💌 Kirim Ucapan</button>
+        </form>
+        <div class="wishes-wall" id="wishes-wall">
+          <div class="wish-card" data-aos="fade-up">
+            <div class="wish-avatar">A</div>
+            <div class="wish-body">
+              <div class="wish-header">
+                <span class="wish-name">Andi Firmansyah</span>
+                <span class="wish-time">2 hari lalu</span>
+              </div>
+              <p class="wish-text">Selamat menempuh hidup baru! Semoga menjadi keluarga sakinah, mawaddah, warahmah.
+                Barakallahu lakuma 🤍</p>
+              <div class="wish-likes" onclick="likeWish(this)">❤ <span>12</span></div>
+            </div>
+          </div>
+          <div class="wish-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="wish-avatar">S</div>
+            <div class="wish-body">
+              <div class="wish-header">
+                <span class="wish-name">Siti Rahayu</span>
+                <span class="wish-time">1 hari lalu</span>
+              </div>
+              <p class="wish-text">Masya Allah, barakallah. Semoga pernikahan kalian penuh cinta dan keberkahan
+                selamanya 💕</p>
+              <div class="wish-likes" onclick="likeWish(this)">❤ <span>8</span></div>
+            </div>
+          </div>
+          <div class="wish-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="wish-avatar">B</div>
+            <div class="wish-body">
+              <div class="wish-header">
+                <span class="wish-name">Budi Santoso</span>
+                <span class="wish-time">5 jam lalu</span>
+              </div>
+              <p class="wish-text">Selamat dan bahagia selalu! Semoga diberi keturunan yang shaleh dan shalehah. Aamiin
+                🌺</p>
+              <div class="wish-likes" onclick="likeWish(this)">❤ <span>5</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AMPLOP DIGITAL -->
+    <section class="gift-section" id="gift-section">
+      <div class="container">
+        <div class="section-header light" data-aos="fade-up">
+          <span class="section-tag light-tag">Hadiah Pernikahan</span>
+          <h2 class="section-title light-title">Amplop Digital</h2>
+          <div class="title-ornament light-ornament">✦ ✦ ✦</div>
+          <p class="section-desc light-desc">Doa restu Anda adalah hadiah terbesar bagi kami. Namun jika berkenan, Anda
+            dapat memberikan hadiah melalui:</p>
+        </div>
+        <div class="gift-cards">
+          <div class="gift-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="gift-bank-logo">🏦</div>
+            <div class="gift-bank-name">BCA</div>
+            <div class="gift-account-name">Rizky Pratama</div>
+            <div class="gift-account-number" id="bca-number">1234567890</div>
+            <button class="btn-copy" onclick="copyAccount('bca-number', this)" id="copy-bca">📋 Salin Nomor</button>
+          </div>
+          <div class="gift-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="gift-bank-logo">🏦</div>
+            <div class="gift-bank-name">Mandiri</div>
+            <div class="gift-account-name">Nabila Aulia</div>
+            <div class="gift-account-number" id="mandiri-number">0987654321</div>
+            <button class="btn-copy" onclick="copyAccount('mandiri-number', this)" id="copy-mandiri">📋 Salin
+              Nomor</button>
+          </div>
+          <div class="gift-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="gift-bank-logo">📱</div>
+            <div class="gift-bank-name">DANA / GoPay</div>
+            <div class="gift-account-name">Rizky Pratama</div>
+            <div class="gift-account-number" id="ewallet-number">081234567890</div>
+            <button class="btn-copy" onclick="copyAccount('ewallet-number', this)" id="copy-ewallet">📋 Salin
+              Nomor</button>
+          </div>
+        </div>
+        <div class="gift-address" data-aos="fade-up" data-aos-delay="400">
+          <div class="gift-address-icon">🏠</div>
+          <h4>Kirim Hadiah Fisik</h4>
+          <p>Jl. Mawar Indah No. 25, RT 03/RW 06<br />Kebayoran Baru, Jakarta Selatan 12120<br /><em>(a.n. Rizky
+              Pratama)</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="closing-section" id="closing-section">
+      <div class="closing-bg"></div>
+      <div class="container" data-aos="fade-up">
+        <div class="closing-content">
+          <div class="closing-icon">💐</div>
+          <h2 class="closing-title">Terima Kasih</h2>
+          <p class="closing-verse">"Dan kami jadikan dari air segala sesuatu yang hidup"<br /><em>— QS. Al-Anbiya:
+              30</em></p>
+          <p class="closing-text">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
+            berkenan hadir untuk memberikan doa restu.</p>
+          <div class="closing-names">
+            <p>Kami yang berbahagia,</p>
+            <h3>Rizky &amp; Nabila</h3>
+            <p>beserta keluarga besar</p>
+          </div>
+          <a href="https://wa.me/6281234567890?text=Assalamualaikum%2C+saya+akan+hadir+di+pernikahan+Rizky+%26+Nabila"
+            class="btn-wa-main" id="wa-confirm" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Konfirmasi via WhatsApp
+          </a>
+          <p class="closing-hashtag">#RizkyNabilaWedding2027</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Made with ❤ for Rizky &amp; Nabila · 2027</p>
+      <p class="footer-sub">Digital Wedding Invitation</p>
+    </footer>
+
+  </div><!-- end #main-content -->
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
